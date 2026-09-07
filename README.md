@@ -35,7 +35,13 @@ Banks lose significant revenue when customers close their accounts. This project
 5. **Demographic factors (age, income) show weaker, non-linear effects** — income shows a U-shaped relationship with churn (both low and high income segments churn more than the middle tier)
 6. **No reliable link found between fraud exposure and churn** in this dataset — an honest negative finding, flagged with appropriate statistical caveats (see analysis notebook)
 
-## 📊 Dashboard Preview
+## 📈 Exploratory Analysis (Python)
+
+![Transaction Behavior Boxplot](python_eda_boxplot.png)
+
+Boxplot comparison showing churned customers had significantly lower transaction counts and amounts than retained customers — the strongest behavioral signal identified in this analysis.
+
+## 📊 Dashboard Preview (Power BI)
 
 ![Dashboard Screenshot](power_bi_dashboard.png)
 
@@ -55,15 +61,18 @@ The Power BI dashboard includes:
 ```
 ├── 1_bank_customers_churn_dataset.csv   # Real customer data
 ├── 2_fraud_transactions_dataset.csv      # Synthetic transaction data
+├── bank_project_analysis.ipynb           # Full Python analysis notebook
 ├── bank_project_final.pbix               # Power BI dashboard file
 ├── power_bi_dashboard.png                # Dashboard preview image
+├── python_eda_boxplot.png                # EDA boxplot preview image
 └── README.md
 ```
 
 ## 🚀 How to Explore
 
-1. Open `bank_project_final.pbix` in [Power BI Desktop](https://powerbi.microsoft.com/desktop) (free) to interact with the dashboard
-2. Load the CSV files into a Python/Jupyter environment to reproduce the analysis
+1. Open `bank_project_analysis.ipynb` directly on GitHub to see the full Python analysis (code, output, and charts) — no setup needed
+2. Open `bank_project_final.pbix` in [Power BI Desktop](https://powerbi.microsoft.com/desktop) (free) to interact with the dashboard
+3. Load the CSV files into a Python/Jupyter environment to reproduce the analysis yourself
 
 ---
 *This project was built as a portfolio piece to demonstrate practical data analysis skills in banking/fintech, including data cleaning, statistical reasoning, and business storytelling.*
