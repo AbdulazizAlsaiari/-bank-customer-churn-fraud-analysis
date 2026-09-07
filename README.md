@@ -37,7 +37,7 @@ Banks lose significant revenue when customers close their accounts. This project
 
 ## 📊 Dashboard Preview
 
-![Dashboard Screenshot](Screenshot%202026-09-07%20174003.png)
+![Dashboard Screenshot](power_bi_dashboard.png)
 
 The Power BI dashboard includes:
 - Total customer count and churn rate KPIs
@@ -56,7 +56,7 @@ The Power BI dashboard includes:
 ├── 1_bank_customers_churn_dataset.csv   # Real customer data
 ├── 2_fraud_transactions_dataset.csv      # Synthetic transaction data
 ├── bank_project_final.pbix               # Power BI dashboard file
-├── Screenshot 2026-09-07 174003.png      # Dashboard preview
+├── power_bi_dashboard.png                # Dashboard preview image
 └── README.md
 ```
 
