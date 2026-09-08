@@ -23,17 +23,18 @@ Banks lose significant revenue when customers close their accounts. This project
 
 - **Python** (pandas, matplotlib, seaborn) — data cleaning, exploratory data analysis (EDA)
 - **Google Colab** — cloud-based analysis environment
-- **Power BI** — interactive dashboard with DAX measures, relationships, and slicers
+- **Power BI** — interactive dashboard with DAX measures, relationships, custom theming, and slicers
 - **Statistical testing** (Chi-square test) — validating significance of findings
 
 ## 🔍 Key Findings
 
 1. **Overall churn rate: 16.1%** of customers (1,627 out of 10,127)
 2. **Transaction activity is the strongest churn signal** — churned customers transacted 35% less frequently and spent 33% less than retained customers, suggesting a gradual "wallet share erosion" before account closure
-3. **Customer service contact frequency correlates strongly with churn** — customers with 4+ contacts in 12 months show churn rates 2-3x higher than those with 0-1 contacts
-4. **Number of banking products is the single strongest predictor** — customers with only 1-2 products churn at ~26-28%, compared to ~10-12% for customers with 5-6 products
+3. **Number of banking products is the single strongest predictor** — customers with only 1-2 products churn at ~26-28%, compared to ~10-12% for customers with 5-6 products
+4. **Months of inactivity correlates strongly with churn** — customers with 0 inactive months show a notably different churn pattern than those with extended inactivity periods
 5. **Demographic factors (age, income) show weaker, non-linear effects** — income shows a U-shaped relationship with churn (both low and high income segments churn more than the middle tier)
-6. **No reliable link found between fraud exposure and churn** in this dataset — an honest negative finding, flagged with appropriate statistical caveats (see analysis notebook)
+6. **93% of customers hold the entry-level "Blue" card**, with Silver, Gold, and Platinum making up a small minority — explaining why card-tier-based churn differences are statistically unreliable (small sample sizes)
+7. **No reliable link found between fraud exposure and churn** in this dataset — an honest negative finding, flagged with appropriate statistical caveats (see analysis notebook)
 
 ## 📈 Exploratory Analysis (Python)
 
@@ -41,20 +42,23 @@ Banks lose significant revenue when customers close their accounts. This project
 
 Boxplot comparison showing churned customers had significantly lower transaction counts and amounts than retained customers — the strongest behavioral signal identified in this analysis.
 
-## 📊 Dashboard Preview (Power BI)
+## 📊 Interactive Dashboard (Power BI)
 
 ![Dashboard Screenshot](power_bi_dashboard.png)
 
-The Power BI dashboard includes:
-- Total customer count and churn rate KPIs
-- Churn rate by number of banking products (interactive chart)
-- Income category slicer for dynamic filtering
+The Power BI dashboard features a custom sidebar layout with a navy/gold theme and includes:
+- **KPI cards** — total customers, churn rate, and a breakdown of attrited vs. existing customers
+- **Churn Rate by Number of Bank Products** — the strongest predictor identified in the analysis
+- **Churn Rate by Income Category** — showing the non-linear (U-shaped) relationship
+- **Churn Rate by Months of Inactivity** — an early-warning behavioral signal
+- **Customer Distribution by Card Type** (donut chart) — showing portfolio composition
+- **Dual slicers** (Income Category, Card Category) for dynamic, cross-filtered exploration
 
 ## 💡 Business Recommendations
 
 - **Cross-sell additional products** to single-product customers — the strongest lever to reduce churn
-- **Flag customers with 3+ service contacts** for proactive retention outreach
-- **Monitor declining transaction activity** as an early warning signal, not just complaints
+- **Monitor extended inactivity periods** as an early warning signal for proactive retention outreach
+- **Track declining transaction activity**, not just customer complaints, as a churn indicator
 
 ## 📁 Repository Structure
 
@@ -75,4 +79,4 @@ The Power BI dashboard includes:
 3. Load the CSV files into a Python/Jupyter environment to reproduce the analysis yourself
 
 ---
-*This project was built as a portfolio piece to demonstrate practical data analysis skills in banking/fintech, including data cleaning, statistical reasoning, and business storytelling.*
+*This project was built as a portfolio piece to demonstrate practical data analysis skills in banking/fintech, including data cleaning, statistical reasoning, dashboard design, and business storytelling.*
